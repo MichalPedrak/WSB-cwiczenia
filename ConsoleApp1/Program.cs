@@ -6,16 +6,19 @@ internal class Program
     {
         while (true)
         {
-            Console.WriteLine("");
-            Console.WriteLine("Podaj element z talicy");
             
-            int element = int.Parse(Console.ReadLine());
-        
-            int[] array = { 5, 6, 7, 1, 2 };
-        
-            string isInArray = array.Contains(element) ? "Element zawiera sie w tablicy" : "Element nie nie nie ";
+            int[] array = new int[5];
 
-            Console.WriteLine(isInArray);   
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine("Podaj ocenę");
+                array[i] = int.Parse(Console.ReadLine());
+            }
+
+            float average = (float)(array.Average(x => x) * array.Length / array.Length);
+            
+            Console.WriteLine($"Średnia to {average}");
+    
         }
     }
 }
