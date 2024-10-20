@@ -4,25 +4,18 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("Give water level");
+        while (true)
+        {
+            Console.WriteLine("");
+            Console.WriteLine("Podaj element z talicy");
+            
+            int element = int.Parse(Console.ReadLine());
+        
+            int[] array = { 5, 6, 7, 1, 2 };
+        
+            string isInArray = array.Contains(element) ? "Element zawiera sie w tablicy" : "Element nie nie nie ";
 
-        int waterLevel = int.Parse(Console.ReadLine());
-
-        if (waterLevel > 1000)
-        {
-            Console.WriteLine("Poziom wody jest za wysoki");
+            Console.WriteLine(isInArray);   
         }
-        else if (waterLevel >= 800 && waterLevel <= 1000)
-        {
-            Console.WriteLine("Poziom wody jest ok");
-        }
-        else
-        {
-            Console.WriteLine("Poziom wody jest za niski1");
-        }
-        
-        
-        
-        
     }
 }
